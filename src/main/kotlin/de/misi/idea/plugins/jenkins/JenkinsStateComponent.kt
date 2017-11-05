@@ -17,7 +17,7 @@ class JenkinsStateComponent : ApplicationComponent {
                 val settings = WorkspaceSettings.getInstance(project)
                 currentStateWidget = CurrentStateWidget(project)
                 currentStateWidget.initialize(settings)
-                statusBar(project).addWidget(currentStateWidget, "before Position", project)
+                statusBar(project)?.addWidget(currentStateWidget, "before Position", project)
                 settings.addChangeListener(currentStateWidget)
             }
         })
